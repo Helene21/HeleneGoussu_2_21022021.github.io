@@ -3,6 +3,8 @@
 
 body
 {
+	width: 1440px;
+	margin: auto;
 	font-family: 'Raleway', sans-serif;
 	color: #000000;
 }
@@ -32,6 +34,11 @@ ul
 	list-style-type: none;
 }
 
+.grey
+{
+	color: #F2F2F2;
+}
+
 
 /*  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     header   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
@@ -59,13 +66,13 @@ nav li
 	margin-right: 15px;
 }
 
-nav a, a:visited
+nav a, nav a:visited
 {
 	text-decoration: none;
 	color: #000000;
 }
 
-.blue
+.blue, nav a:hover
 {
 	color: #0065FC;
 }
@@ -83,6 +90,12 @@ nav a, a:visited
 	font-family: 'Raleway', sans-serif;
 }
 
+#boutonformulaire input
+{
+	padding: 0;
+}
+
+
 .fa-map-marker-alt
 {
 	background-color: #F2F2F2;
@@ -92,14 +105,20 @@ nav a, a:visited
 	border: 1px solid #0065FC;
 	border-bottom-left-radius: 10px;
 	border-top-left-radius: 10px;
+	line-height: 30px;
 }
 
 #lieu_demandé
 {
 	border: 1px solid #0065FC;
 	height: 30px;
-	color: #000000;
 	font-weight: bold;
+}
+
+input::placeholder
+{
+	color: black;
+	padding-left: 5px;
 }
 
 #Rechercher
@@ -109,7 +128,7 @@ nav a, a:visited
 	border-top-right-radius: 10px; 
 	background-color: #0065FC;
 	width: 100px;
-	height: 30px;
+	height: 32px;
 	font-weight: bold;
 	color: white;
 	margin-left: -4px;
@@ -146,6 +165,7 @@ nav a, a:visited
 	padding: 10px;
 	margin-right: 5px;
 	margin-left: -3px;
+	line-height: 20px;
 }
 
 .fa-info
@@ -159,9 +179,9 @@ nav a, a:visited
 	color: #0065FC;
 }
 
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx section hébergements + popularité xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx section hébergements  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
-
+		
 #heberg
 {
 	display: flex;
@@ -179,7 +199,50 @@ nav a, a:visited
 	border: 2px solid white;
 	border-radius: 20px;
 	background-color: white;
+	box-shadow: 4px 4px 10px grey;
 }
+
+figcaption h3
+{
+	font-size: 1em;
+	margin-top: 5px;
+	margin-bottom: 0;
+
+}
+
+figcaption p
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+figcaption i
+{
+	margin-bottom: 5px;
+}
+
+			/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Partie hébergements  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+#heb
+{
+	width: 60%;
+}
+
+#listehotels
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+}
+
+#heb figure
+{
+	width: 250;
+	height: 200;
+	margin: 20px 10px 10px 30px;
+}
+
 
 .hotels img
 {
@@ -187,21 +250,94 @@ nav a, a:visited
 	border-top-left-radius: 20px;
 }
 
+.hotels figcaption
+{
+	margin-left: 10px;
+}
+
+#heb h1, #aff
+{
+	margin-left: 40px;
+}
+
+		/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Partie popularité  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+
+#pop
+{
+	width: 30%;
+}
+
+
+
+#titrepop
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#pop figure
+{
+	display: flex;
+	padding-right: 20px;
+	width: 345px;
+	height: 140px;
+}
+
+.populaires img
+{
+	border-bottom-left-radius: 20px;
+	border-top-left-radius: 20px;
+}
+
+
+.populaires figcaption
+{
+	margin-left: 15px;
+}
+
+.populaires figcaption i
+{
+	margin-top: 50px;
+}
+
+
+
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx section Activités  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+#acti figure
+{
+	border-radius: 20px;
+	background-color: white;
+	box-shadow: 4px 4px 10px grey;
+	padding: 0;
+}
+
+
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Footer  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 footer
 {
 	display: flex;
+	background-color: #F2F2F2;
 }
 
-footer div
+footer div 
 {
-	margin-right: 30px;
+	margin-right: 200px;
 }
 
+footer div h2
+{
+	margin-left: 40px;
+	margin-top: 30px;
+}
 
-
+footer li
+{
+	margin-bottom: 10px;
+}
 
 
