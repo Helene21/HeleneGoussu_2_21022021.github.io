@@ -9,6 +9,11 @@ body
 	color: #000000;
 }
 
+header, section
+{
+	margin: 50px 50px 50px 50px;
+}
+
 h1, h2, #filtres, #aff, .bold
 {
 	font-weight: bold;
@@ -102,7 +107,7 @@ nav a, nav a:visited
 	width: 35px;
 	height: 30px;
 	text-align: center;
-	border: 1px solid #0065FC;
+	border: 1px solid #F2F2F2;
 	border-bottom-left-radius: 10px;
 	border-top-left-radius: 10px;
 	line-height: 30px;
@@ -110,7 +115,7 @@ nav a, nav a:visited
 
 #lieu_demandé
 {
-	border: 1px solid #0065FC;
+	border: 1px solid #F2F2F2;
 	height: 30px;
 	font-weight: bold;
 }
@@ -185,13 +190,13 @@ input::placeholder
 #heberg
 {
 	display: flex;
+	justify-content: space-between;
 }
 
 #heberg div
 {
 	background-color: #F2F2F2;
 	border-radius: 20px;
-	margin-right: 30px;
 }
 
 #heberg figure
@@ -225,7 +230,7 @@ figcaption i
 
 #heb
 {
-	width: 60%;
+	width: 880px;
 }
 
 #listehotels
@@ -238,9 +243,9 @@ figcaption i
 
 #heb figure
 {
-	width: 250;
-	height: 200;
-	margin: 20px 10px 10px 30px;
+	width: 250px;
+	height: 200px;
+	margin: 20px 10px 10px 10px;
 }
 
 
@@ -248,6 +253,7 @@ figcaption i
 {
 	border-top-right-radius: 20px;
 	border-top-left-radius: 20px;
+	width: 100%;
 }
 
 .hotels figcaption
@@ -265,7 +271,7 @@ figcaption i
 
 #pop
 {
-	width: 30%;
+	width: 420px;
 }
 
 
@@ -306,14 +312,34 @@ figcaption i
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx section Activités  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
+#activités
+{
+	display: flex;
+	flex-direction: row;
+}
+
+
 #acti figure
 {
 	border-radius: 20px;
 	background-color: white;
 	box-shadow: 4px 4px 10px grey;
 	padding: 0;
+	width: 300px;
 }
 
+#activités img
+{
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	width: 100%;
+}
+
+#activités figcaption
+{
+	margin : 5px 0 5px 10px;
+	padding-bottom: 10px;
+}
 
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Footer  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
