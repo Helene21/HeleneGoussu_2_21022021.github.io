@@ -459,3 +459,29 @@ footer
 		}
 
 
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX VERSION MOBILE  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+@media all and (max-width: 768px)
+
+{
+	
+	body
+	{
+		width: auto;
+	}
+
+	h1
+	{
+		color: red;
+	}
+
+
+
+
+
+
+
+}		
+
+
