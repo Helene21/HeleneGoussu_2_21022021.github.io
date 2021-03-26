@@ -1,5 +1,5 @@
 
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    Généralités xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    GENERALITES    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
 body
 {
@@ -9,48 +9,50 @@ body
 	color: #000000;
 }
 
-header, section
-{
-	margin: 50px 50px 50px 50px;
-}
+	header, section
+	{
+		margin: 40px 50px 40px 50px;
+	}
 
-h1, h2, #filtres, #aff, .bold
-{
-	font-weight: bold;
-}
+	h1, h2, #filtres, #aff, .bold
+	{
+		font-weight: bold;
+	}
 
-h1
-{
-	font-size: 1.4em;
-}
+	h1
+	{
+		font-size: 1.4em;
+	}
 
-h2, #filtres, #aff, nav, p
-{
-	font-size: 1em;
-}
+	#aff, nav, p, h3, footer ul
+	{
+		font-size: 1em;
+	}
 
-footer ul
-{
-	font-size: 0.8em;
-}
-
-ul
-{
-	list-style-type: none;
-}
-
-.blue
-{
-	color: #0065FC;
-}
-
-.grey
-{
-	color: #F2F2F2;
-}
+	ul
+	{
+		list-style-type: none;
+	}
 
 
-/*  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     header   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+	a, a:visited
+	{
+		text-decoration: none;
+		color: #000000;
+		}
+
+	.blue
+	{
+		color: #0065FC;
+	}
+
+	.grey
+	{
+		color: #F2F2F2;
+	}
+
+
+/*  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX     HEADER   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
 
 header
@@ -60,159 +62,181 @@ header
 	align-items: center;
 }
 
-#logo
-{
-	width: 100px;
-	height: auto;
-}
-
-nav ul
-{
-	display: flex;
-}
-
-nav li
-{
-	margin: 0 25px 0 50px;
-}
-
-nav a, nav a:visited
-{
-	text-decoration: none;
-	color: #000000;
+	#logo
+	{
+		width: 100px;
+		height: auto;
 	}
 
+	nav ul
+	{
+		display: flex;
+	}
 
-nav a:hover
+		nav li
+		{
+			margin: 0 26px 0 42px;
+		}
+
+		nav a:hover
+		{
+			color: #0065FC;
+			font-weight: bold;
+			border-top: solid 4px #0065FC;
+			padding-top: 30px;
+		}
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX SECTION RECHERCHE  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+#recherche h1
 {
-	color: #0065FC;
-	border-top: solid 2px #0065FC;
-	padding-top: 30px;
+	margin-bottom: -10px;
 }
 
 
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx section Recherche  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
-
-
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  bouton formulaire   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  bouton formulaire   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 #boutonformulaire
 {
 	display: flex;
 	align-items: center;
 	font-size: 1.2em;
-}
-
-#boutonformulaire input
-{
-	padding: 0;
+	margin-top: -20px;
 }
 
 
-#boutonformulaire .fa-map-marker-alt
-{
-	background-color: #F2F2F2;
-	width: 50px;
-	height: 50px;
-	text-align: center;
+	#boutonformulaire .fa-map-marker-alt
+	{
+		background-color: #F2F2F2;
+		width: 54px;
+		height: 50px;
+		text-align: center;
+		border-bottom-left-radius: 15px;
+		border-top-left-radius: 15px;
+		line-height: 50px;
+	}
+
+	#boutonformulaire input
+	{
+		padding: 0;
+	}
+
+	#boutonformulaire p
+	{
+		margin-left: -5px;
+	}
+
+	p input
+	{
+		font-family: 'Raleway', sans-serif;
+		font-size: 1em;
+	}
+
+		#lieu_demandé
+		{
+			border: 1px solid #F2F2F2;
+			width: 235px;
+			height: 50px;
+			font-weight: bold;
+			margin-left: 5px;
+			margin-right: -4px;
+		}
+
+			input::placeholder
+			{
+				color: black;
+				padding-left: 10px;
+			}
+
+		#Rechercher
+		{
+			border: 1px solid #0065FC;
+			border-bottom-right-radius : 15px; 
+			border-top-right-radius: 15px; 
+			background-color: #0065FC;
+			width: 135px;
+			height: 52px;
+			font-weight: bold;
+			color: white;
+			margin-left: -4px;
+		}
+
 	
-	border-bottom-left-radius: 20px;
-	border-top-left-radius: 20px;
-	line-height: 50px;
-}
-
-p input
-{
-	font-size: 1em;
-}
-
-#lieu_demandé
-{
-	border: 1px solid #F2F2F2;
-	width: 235px;
-	height: 50px;
-	font-weight: bold;
-	margin-left: 5px;
-}
-
-input::placeholder
-{
-	color: black;
-	padding-left: 5px;
-}
-
-#Rechercher
-{
-	border: 1px solid #0065FC;
-	border-bottom-right-radius : 20px; 
-	border-top-right-radius: 20px; 
-	background-color: #0065FC;
-	width: 135px;
-	height: 52px;
-	font-weight: bold;
-	color: white;
-	margin-left: -4px;
-}
-
-
-
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  fin bouton formulaire   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  fin bouton formulaire   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    filtres   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 
 #filtres, #filtres ul
 {
 	display: flex;
 	align-items: center;
-	margin-left: 10px;
 }
 
-#filtres h2
-{
-	font-size: 1.2em;
-}
+	#filtres h2
+	{
+		font-size: 1.1em;
+	}
 
-#filtres li
-{
-	margin-right: 30px;
-	border: 3px solid #F2F2F2;
-	border-radius: 20px;
-	padding-right: 20px;
-	font-size: 1.2em;
-}
+	#filtres i
+	{
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		border-radius: 50%;
+		background-color: #DEEBFF;
+		color: #0065FC;
+		padding: 10px;
+		margin-right: 12px;
+		margin-left: -3px;
+		line-height: 30px;
+	}
 
-#filtres i
-{
-	width: 20px;
-	height: 20px;
-	text-align: center;
+	#filtres li
+	{
+		margin-right: 30px;
+		border: 3px solid #F2F2F2;
+		border-radius: 30px;
+		padding-right: 20px;
+		font-size: 1.1em;
+	}
+
 	
-	border-radius: 50%;
-	background-color: #DEEBFF;
-	color: #0065FC;
-	padding: 10px;
-	margin-right: 5px;
-	margin-left: -3px;
-	line-height: 20px;
-}
+		#filtres li:hover
+
+		{
+			color: #0065FC;
+		}
+
+		#filtres li:hover i
+
+		{
+			background-color: #0065FC;
+			color: #DEEBFF;
+		}
 
 .fa-info
 {
-	width: 15px;
-	height: 15px;
+	width: 20px;
+	height: 20px;
+	font-size: 0.8em;
 	text-align: center;
-	border: 1px solid #F2F2F2;
+	border: 2px solid #F2F2F2;
 	border-radius: 50%;
-	margin-right: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
 	color: #0065FC;
+	line-height: 20px;
 }
 
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx section hébergements + popularité xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX SECTION HEBERGEMENTS + POPULARITE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
 		
 #heberg
 {
 	display: flex;
 	justify-content: space-between;
+	margin-top: -10px;
 }
 
 #heberg div
@@ -221,32 +245,37 @@ input::placeholder
 	border-radius: 20px;
 }
 
+#heberg h1
+{
+	margin-top: 40px;
+	margin-bottom: 5px;
+}
+
 #heberg figure
 {
-	
+	border: solid 4px white;
 	border-radius: 20px;
 	background-color: white;
 	box-shadow: 0px 0px 6px grey;
 }
 
-figcaption h3
-{
-	font-size: 1em;
-	margin-top: 5px;
-	margin-bottom: 0;
+	figcaption h3
+	{
+		margin-top: 5px;
+		margin-bottom: 0;
 
-}
+	}
 
-figcaption p
-{
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
+	figcaption p
+	{
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
 
-figcaption i
-{
-	margin-bottom: 5px;
-}
+	figcaption i
+	{
+		margin-bottom: 5px;
+	}
 
 			/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Partie hébergements  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
@@ -255,38 +284,44 @@ figcaption i
 	width: 880px;
 }
 
-#listehotels
-{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-content: center;
-}
+	#heb h1, #aff
+	{
+		margin-left: 40px;
+	}
 
-#heb figure
-{
-	width: 250px;
-	height: 200px;
-	margin: 20px 10px 10px 10px;
-}
+	#listehotels
+	{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+	}
+
+		#heb figure
+		{
+			width: 250px;
+			height: 200px;
+			margin: 20px 10px 10px 10px;
+		}
 
 
-.hotels img
-{
-	border-top-right-radius: 20px;
-	border-top-left-radius: 20px;
-	width: 100%;
-}
+			.hotels img
+			{
+				border-top-right-radius: 20px;
+				border-top-left-radius: 20px;
+				width: 100%;
+			}
 
-.hotels figcaption
-{
-	margin-left: 10px;
-}
+			.hotels figcaption
+			{
+				margin-left: 10px;
+			}
 
-#heb h1, #aff
-{
-	margin-left: 40px;
-}
+	
+	#aff
+	{
+		margin-bottom: 50px;
+	}
 
 		/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Partie popularité  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
@@ -296,108 +331,131 @@ figcaption i
 	width: 420px;
 }
 
+	#titrepop
+	{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+		#titrepop h1
+		{
+			margin-left: -18px;
+		}
+
+		#titrepop i
+		{
+			font-size: 1.4em;
+			margin-right: -15px;
+		}
+
+	.populaires
+	{
+		margin-bottom: 30px;
+	}
+
+		#pop figure
+		{
+			display: flex;
+			flex-direction: row;
+			height: 140px;
+		}
+
+			.populaires img
+			{
+				border-bottom-left-radius: 20px;
+				border-top-left-radius: 20px;
+			}
 
 
-#titrepop
-{
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-}
+			.populaires figcaption
+			{
+				margin: 5px 40px 0 20px;
+			}
 
-#pop figure
-{
-	display: flex;
-	width: 82%;
-	height: 140px;
-}
-
-.populaires img
-{
-	border-bottom-left-radius: 20px;
-	border-top-left-radius: 20px;
-}
-
-
-.populaires figcaption
-{
-	margin-left: 15px;
-}
-
-.populaires figcaption i
-{
-	margin-top: 50px;
-}
+				.populaires figcaption i
+				/*plutôt à placer en absolu xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+				{
+					margin-top: 30px;
+				}
 
 
 
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx section Activités  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX SECTION ACTIVITES  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
 #activités
 {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	
-
 }
 
+	#acti h1
+	{
+		margin: 50px 0 7px 0;
+	}
 
-#acti figure
-{
-	border-radius: 20px;
-	background-color: white;
-	box-shadow: 0px 0px 6px grey;
-	width: 300px;
-	margin-left: 0;
-}
+	#activités div
+	{
+		width: 22.7%;
+		height: 445px;
+	}
 
-#activités div
-{
-	width: 22%;
-}
+		#acti figure
+		{
+			border-radius: 20px;
+			background-color: white;
+			box-shadow: 0px 0px 6px grey;
+			width: 300px;
+			margin-left: 0;
+		}
 
-#activités img
-{
-	border-top-right-radius: 20px;
-	border-top-left-radius: 20px;
-	width: 100%;
-}
+			#activités img
+			{
+				border-top-right-radius: 20px;
+				border-top-left-radius: 20px;
+				width: 100%;
+			}
 
-#activités figcaption
-{
-	margin : 0px 0 0px 10px;
-	height: 55px;
-}
+			#activités figcaption
+			{
+				margin-left: 20px;
+				height: 55px;
+				line-height: 55px;
+			}
 
-figure #notre_dame, figure #parc_longchamp
-{
-	margin-right: 0;
-}
+			#notre_dame, #pomègues
+			{
+				margin-bottom: 30px;
+			}
 
 
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Footer  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   FOOTER  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
 footer
 {
 	display: flex;
 	background-color: #F2F2F2;
+	height: 220px;
+	margin-top: 80px;
 }
 
-footer div 
-{
-	margin-right: 200px;
-}
+	footer div 
+	{
+		margin-top: 12px;
+		margin-right: 210px;
+	}
 
-footer div h2
-{
-	margin-left: 40px;
-	margin-top: 30px;
-}
+		footer div h2
+		{
+			font-size: 1.2em;
+			margin-left: 40px;
+			margin-top: 30px;
+		}
 
-footer li
-{
-	margin-bottom: 10px;
-}
+		footer li
+		{
+			margin-bottom: 10px;
+		}
 
 
