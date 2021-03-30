@@ -71,6 +71,7 @@ header
 	nav ul
 	{
 		display: flex;
+		margin-right: 140px;
 	}
 
 		nav li
@@ -85,6 +86,12 @@ header
 			border-top: solid 4px #0065FC;
 			padding-top: 30px;
 		}
+
+	header p
+	{
+		position: absolute;
+		right: 4%;
+	}
 
 
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX SECTION RECHERCHE  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
@@ -170,6 +177,7 @@ header
 #filtres, #filtres ul
 {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 }
 
@@ -239,7 +247,7 @@ header
 	margin-top: -10px;
 }
 
-#heberg div
+#heberg #heb, #pop
 {
 	background-color: #F2F2F2;
 	border-radius: 20px;
@@ -370,14 +378,18 @@ header
 
 			.populaires figcaption
 			{
-				margin: 5px 40px 0 20px;
+				display: flex;
+				flex-direction: column;
+				margin: 5px 40px 0 15px;
 			}
 
-				.populaires figcaption i
-				/*plutôt à placer en absolu xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+				.push
+				
 				{
-					margin-top: 30px;
+					margin-top: auto;
+					padding-bottom: 5px;
 				}
+
 
 
 
@@ -435,15 +447,14 @@ header
 footer
 {
 	display: flex;
+	justify-content: space-around;
 	background-color: #F2F2F2;
-	height: 220px;
 	margin-top: 80px;
 }
 
 	footer div 
 	{
 		margin-top: 12px;
-		margin-right: 210px;
 	}
 
 		footer div h2
@@ -458,7 +469,7 @@ footer
 			margin-bottom: 10px;
 		}
 
-
+		
 
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX VERSION MOBILE  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
@@ -466,6 +477,7 @@ footer
 
 {
 	
+	/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx modifs disposition générale xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 	body
 	{
 		width: auto;
@@ -475,6 +487,54 @@ footer
 	{
 		color: red;
 	}
+
+	header, section
+	{
+		margin: 0;
+	}
+
+
+
+		#heberg
+		{
+		flex-direction: column-reverse;
+		}
+
+		footer,	#listehotels, #activités
+			{
+			flex-direction: column;
+			}
+
+			
+
+		
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx modification menu navigation xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+		nav li
+		{
+			margin:0;
+		}
+
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx modification bouton formulaire  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxx  modif disposition + fonds section hébergements  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+
+			#pop
+			{
+				width: auto;
+				border-radius: 0;
+			}
+
+			#heberg #heb
+			{
+				width: auto;
+				background-color: unset;
+			}
+
 
 
 
