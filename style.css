@@ -3,7 +3,8 @@
 
 body
 {
-	width: 1440px;
+	width: auto;
+	max-width: 1440px;
 	margin: auto;
 	font-family: 'Raleway', sans-serif;
 	color: #000000;
@@ -68,32 +69,31 @@ header
 		height: auto;
 	}
 
-	nav ul
+	nav
 	{
 		display: flex;
-		margin-right: 140px;
 	}
 
-		nav li
+		nav ul
 		{
-			margin: 0 26px 0 42px;
+			display: flex;
+			margin-right: 40px;
 		}
 
-		nav a:hover
-		{
-			color: #0065FC;
-			font-weight: bold;
-			border-top: solid 4px #0065FC;
-			padding-top: 30px;
-		}
+			nav li
+			{
+				margin: 0 26px 0 42px;
+			}
 
-	header p
-	{
-		position: absolute;
-		right: 4%;
-	}
+			nav a:hover
+			{
+				color: #0065FC;
+				font-weight: bold;
+				border-top: solid 4px #0065FC;
+				padding-top: 30px;
+			}
 
-
+	
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX SECTION RECHERCHE  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
 #recherche h1
@@ -104,7 +104,7 @@ header
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  bouton formulaire   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
-#boutonformulaire
+#boutonformulaire, #mobboutonformulaire
 {
 	display: flex;
 	align-items: center;
@@ -113,7 +113,7 @@ header
 }
 
 
-	#boutonformulaire .fa-map-marker-alt
+	#boutonformulaire .fa-map-marker-alt, #mobboutonformulaire .fa-map-marker-alt
 	{
 		background-color: #F2F2F2;
 		width: 54px;
@@ -124,12 +124,12 @@ header
 		line-height: 50px;
 	}
 
-	#boutonformulaire input
+	#boutonformulaire input, #mobboutonformulaire input
 	{
 		padding: 0;
 	}
 
-	#boutonformulaire p
+	#boutonformulaire p, #mobboutonformulaire p
 	{
 		margin-left: -5px;
 	}
@@ -140,7 +140,7 @@ header
 		font-size: 1em;
 	}
 
-		#lieu_demandé
+		.lieu_demandé
 		{
 			border: 1px solid #F2F2F2;
 			width: 235px;
@@ -156,7 +156,7 @@ header
 				padding-left: 10px;
 			}
 
-		#Rechercher
+		.Rechercher
 		{
 			border: 1px solid #0065FC;
 			border-bottom-right-radius : 15px; 
@@ -223,7 +223,13 @@ header
 			color: #DEEBFF;
 		}
 
-.fa-info
+div#info
+{
+	display: flex;
+	align-items: baseline;
+}		
+
+i.fa-info
 {
 	width: 20px;
 	height: 20px;
@@ -429,12 +435,25 @@ header
 				width: 100%;
 			}
 
+			.recadrer
+			{
+				height: 390px;
+				object-fit: cover;
+			}
+
+			img.vieux_port
+			{
+				object-position: 50% 50%;
+			}
+
 			#activités figcaption
 			{
 				margin-left: 20px;
 				height: 55px;
 				line-height: 55px;
 			}
+
+
 
 			#notre_dame, #pomègues
 			{
@@ -454,6 +473,7 @@ footer
 
 	footer div 
 	{
+		width: 33%;
 		margin-top: 12px;
 	}
 
@@ -488,12 +508,32 @@ footer
 		color: red;
 	}
 
-	header, section
+	header, section#acti
+	{
+		margin: 30px 20px 0 20px;
+	}
+
+	section#recherche
+	{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+		#filtres ul
+		{
+			padding: 0;
+		}
+
+		#filtres li
+		{
+			margin-right: 6px;
+		}
+
+
+	section#heberg
 	{
 		margin: 0;
 	}
-
-
 
 		#heberg
 		{
@@ -505,28 +545,72 @@ footer
 			flex-direction: column;
 			}
 
+		footer div
+		{
+			width: 100%;
+		}
+
 			
 
 		
 
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx modification menu navigation xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
+		
+		header
+		{
+			align-items: flex-start;
+		}
+
 		nav li
 		{
-			margin:0;
+			border-bottom: 2px solid red;
+			padding-bottom: 20px;
+			margin: 0;
+		}
+
+		nav
+		{
+			flex-direction: column-reverse;
+			align-items: flex-end;
+		}
+
+		nav ul
+		{
+			justify-content: space-around;
+			margin: 0;
 		}
 
 
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx modification bouton formulaire  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
+		#boutonformulaire
+		{
+			display: none;
+		}
+
+		form button.Rechercher
+		{
+			width: 50px;
+		}
+
+
+
 
 /*xxxxxxxxxxxxxxxxxxxxxxxxx  modif disposition + fonds section hébergements  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 
-			#pop
+			div#pop
 			{
 				width: auto;
 				border-radius: 0;
+			}
+
+
+			figure.populaires
+			{
+				margin-right: 20px;
+				margin-left: 20px;
 			}
 
 			#heberg #heb
@@ -535,8 +619,62 @@ footer
 				background-color: unset;
 			}
 
+				#heb h1
+				{
+					margin-left: 20px;
+				}
+
+				#heb figure
+				{
+					width: auto;
+					height: auto;
+					margin-right: 0;
+					margin-left: 0;
+				}
+
+				.hotels img
+				{
+					width: 325px;
+					height: 115px;
+				}
 
 
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  modif disposition section activités  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+				#activités div
+				{
+					width: auto;
+					height: auto;
+				}
+
+				#acti figure
+				{
+					width: auto;
+					margin-right: 0;
+				}			
+	
+
+				#acti img
+				{
+					width: 335px;
+					height: 135px;
+				}
+
+				#acti img.recadrer
+				{
+					object-fit: cover;
+
+				}
+
+				#acti img.vieux_port
+				{
+					object-position: 50% 20%;
+				}
+
+				#acti img.calanques
+				{
+					object-position: 50% 25%;
+				}
 
 
 
@@ -544,4 +682,20 @@ footer
 
 }		
 
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+@media all and (min-width: 768px)
+
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx masquer bouton formulaire version mobile   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+{
+
+	#mobboutonformulaire
+	{
+		display: none;
+	}
+
+
+
+}
 

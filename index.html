@@ -24,11 +24,10 @@
     				<li class="blue"><a href="#heberg">Hébergements</a></li>
     				<li><a href="#acti">Activités</a></li>
      			</ul>
+                <p class="blue bold">S'inscrire</p>
     		</nav>
 
-            <p class="blue bold">S'inscrire</p>
-
-    	</header>
+     	</header>
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx section Recherche  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
@@ -44,8 +43,23 @@
 
                 <form method="post" action="#.php">
                     <p>
-                    <input type="text" name="lieu_demandé" id="lieu_demandé" placeholder="Marseille, France" />
-                    <input type="submit" value="Rechercher" id="Rechercher" />
+                    <input type="text" name="lieu_demandé" class="lieu_demandé" placeholder="Marseille, France" />
+                    <input type="submit" value="Rechercher" class="Rechercher" />
+                    </p>
+                </form>
+
+            </div>
+
+           <!-- xxxxxxxxxxxxxxxxxxxxx  BOUTON DIFFERENT POUR LA VERSION MOBILE  xxxxxxxxxxxxxxxxxxxxxxxxxxx --> 
+
+            <div id="mobboutonformulaire">
+
+                <i class="fas fa-map-marker-alt"></i><!-- icône localisation formulaire -->
+
+                <form method="post" action="#.php">
+                    <p>
+                    <input type="text" name="lieu_demandé" class="lieu_demandé" placeholder="Marseille, France" />
+                    <button type="submit" value="Rechercher" class="Rechercher"> <i class="fas fa-search"></i></button>
                     </p>
                 </form>
 
@@ -66,7 +80,10 @@
 	    		</ul>
     		</div>
 
-    		<p> <i class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville </p>
+    		<div id="info"> 
+                <i class="fas fa-info"></i>
+                <p> Plus de 500 logements sont disponibles dans cette ville </p>
+            </div>
     		    		
 
     	</section>
@@ -197,7 +214,7 @@
             <div id="activités">
                 <div>
                 <a href="#"><figure>
-                    <img src="images/activites/vieux_port.jpg" alt="photo_port">
+                    <img src="images/activites/vieux_port1.jpg" alt="photo_port" class="recadrer vieux_port">
                     <figcaption><h3> Vieux Port </h3></figcaption>
                 </figure></a>
                 </div>
@@ -216,7 +233,7 @@
 
                  <div>
                  <a href="#"><figure>
-                    <img src="images/activites/parc_calanques.jpg" alt="photo_calanques">
+                    <img src="images/activites/parc_calanques1.jpg" alt="photo_calanques" class="recadrer calanques">
                     <figcaption><h3> Parc National des Calanques </h3></figcaption>
                  </figure></a>
                 </div>
