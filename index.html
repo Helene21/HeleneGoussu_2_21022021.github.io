@@ -33,7 +33,7 @@
 
     	<section id="recherche">
     		<h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-    		<p>En plein centre ville ou en pleine nature</p>
+    		<p id="centreounature">En plein centre ville ou en pleine nature</p>
 
             <!-- bouton formulaire -->
 
@@ -44,29 +44,15 @@
                 <form method="post" action="#.php">
                     <p>
                     <input type="text" name="lieu_demandé" class="lieu_demandé" placeholder="Marseille, France" />
-                    <input type="submit" value="Rechercher" class="Rechercher" />
-                    </p>
-                </form>
-
-            </div>
-
-           <!-- xxxxxxxxxxxxxxxxxxxxx  BOUTON DIFFERENT POUR LA VERSION MOBILE  xxxxxxxxxxxxxxxxxxxxxxxxxxx --> 
-
-            <div id="mobboutonformulaire">
-
-                <i class="fas fa-map-marker-alt"></i><!-- icône localisation formulaire -->
-
-                <form method="post" action="#.php">
-                    <p>
-                    <input type="text" name="lieu_demandé" class="lieu_demandé" placeholder="Marseille, France" />
+                    <input type="submit" value="Rechercher" class="Rechercher" id="boutonformdesktop" />
+                     <!-- xxxxxxxxxxxxxxxxxxxxx  BOUTON DIFFERENT POUR LA VERSION MOBILE  xxxxxxxxxxxxxxxxxxxxxxxxxxx --> 
                     <button type="submit" value="Rechercher" class="Rechercher"> <i class="fas fa-search"></i></button>
                     </p>
                 </form>
 
-
             </div>
 
-
+         
     		<!-- fin bouton formulaire -->
 
 

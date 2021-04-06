@@ -89,7 +89,7 @@ header
 			{
 				color: #0065FC;
 				font-weight: bold;
-				border-top: solid 4px #0065FC;
+				border-top: solid 2px #0065FC;
 				padding-top: 30px;
 			}
 
@@ -104,16 +104,20 @@ header
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  bouton formulaire   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
-#boutonformulaire, #mobboutonformulaire
+div#boutonformulaire
 {
 	display: flex;
 	align-items: center;
 	font-size: 1.2em;
-	margin-top: -20px;
+	border-top: 2px solid #F2F2F2;
+	border-bottom: 2px solid #F2F2F2;
+	border-radius: 15px;
+	height: 50px;
+	width: 420px;
 }
 
 
-	#boutonformulaire .fa-map-marker-alt, #mobboutonformulaire .fa-map-marker-alt
+	i.fa-map-marker-alt
 	{
 		background-color: #F2F2F2;
 		width: 54px;
@@ -122,14 +126,11 @@ header
 		border-bottom-left-radius: 15px;
 		border-top-left-radius: 15px;
 		line-height: 50px;
+		margin-left: -1px;
 	}
 
-	#boutonformulaire input, #mobboutonformulaire input
-	{
-		padding: 0;
-	}
-
-	#boutonformulaire p, #mobboutonformulaire p
+	
+	#boutonformulaire p
 	{
 		margin-left: -5px;
 	}
@@ -138,12 +139,11 @@ header
 	{
 		font-family: 'Raleway', sans-serif;
 		font-size: 1em;
+		border: unset;
 	}
 
 		.lieu_demandé
 		{
-			border: 1px solid #F2F2F2;
-			width: 235px;
 			height: 50px;
 			font-weight: bold;
 			margin-left: 5px;
@@ -166,7 +166,7 @@ header
 			height: 52px;
 			font-weight: bold;
 			color: white;
-			margin-left: -4px;
+			margin-left: 8px;
 		}
 
 	
@@ -195,7 +195,7 @@ header
 		background-color: #DEEBFF;
 		color: #0065FC;
 		padding: 10px;
-		margin-right: 12px;
+		margin-right: 10px;
 		margin-left: -3px;
 		line-height: 30px;
 	}
@@ -207,6 +207,7 @@ header
 		border-radius: 30px;
 		padding-right: 20px;
 		font-size: 1.1em;
+		margin-bottom: 10px;
 	}
 
 	
@@ -349,7 +350,7 @@ i.fa-info
 	{
 		display: flex;
 		justify-content: space-around;
-		align-items: center;
+		align-items: baseline;
 	}
 
 		#titrepop h1
@@ -496,16 +497,12 @@ footer
 @media all and (max-width: 768px)
 
 {
-	
+
+
 	/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx modifs disposition générale xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 	body
 	{
 		width: auto;
-	}
-
-	h1
-	{
-		color: red;
 	}
 
 	header, section#acti
@@ -515,18 +512,45 @@ footer
 
 	section#recherche
 	{
-		margin-left: 10px;
-		margin-right: 10px;
+		margin: 30px 20px 20px 20px;
 	}
+
+		#recherche h1
+		{
+			margin-bottom: 0;
+		}
+
+		#centreounature
+		{
+			margin-bottom: 30px;
+		}
+
+		#filtres
+		{
+			margin-top: 15px;
+			margin-bottom: -20px;
+		}
 
 		#filtres ul
 		{
 			padding: 0;
+			margin-top: 0px;
 		}
 
 		#filtres li
 		{
 			margin-right: 6px;
+			font-size: 1em;
+		}
+
+		#info
+		{
+			margin: 0 -10px 20px -10px;
+		}
+
+		#info p
+		{
+			width: 90%;
 		}
 
 
@@ -562,36 +586,66 @@ footer
 			align-items: flex-start;
 		}
 
-		nav li
+		#logo
 		{
-			border-bottom: 2px solid red;
-			padding-bottom: 20px;
-			margin: 0;
+			position: absolute;
 		}
 
+		
 		nav
 		{
 			flex-direction: column-reverse;
+			width: 100%;
 			align-items: flex-end;
 		}
 
 		nav ul
 		{
 			justify-content: space-around;
+			width: 100%;
 			margin: 0;
 		}
+
+		nav li
+		{
+			border-bottom: 2px solid #F2F2F2;
+			padding-bottom: 20px;
+			width: 100%;
+			text-align: center;
+			margin: 20px -20px 0 -20px;
+		}
+
+		nav a:hover
+			{
+				color: #0065FC;
+				font-weight: bold;
+				border-top: unset;
+				padding-bottom: 20px;
+				width: 100%;
+				border-bottom: 2px solid #0065FC;
+			}
 
 
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx modification bouton formulaire  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
-		#boutonformulaire
+	div#boutonformulaire
+	{
+		width: 337px;
+		margin: auto;
+	}
+
+
+		#boutonformdesktop
 		{
 			display: none;
 		}
 
 		form button.Rechercher
 		{
-			width: 50px;
+			width: 52px;
+			height: 52px;
+			border-bottom-left-radius: 15px;
+			border-top-left-radius: 15px;
 		}
 
 
@@ -604,6 +658,13 @@ footer
 			{
 				width: auto;
 				border-radius: 0;
+				padding-bottom: 15px;
+			}
+
+			#titrepop
+			{
+				margin-top: -10px;
+				margin-bottom: 20px;
 			}
 
 
@@ -619,9 +680,15 @@ footer
 				background-color: unset;
 			}
 
+			#heberg figure
+			{
+				margin: 0 20px 20px 20px;
+			}
+
 				#heb h1
 				{
 					margin-left: 20px;
+					margin-bottom: 20px;
 				}
 
 				#heb figure
@@ -636,6 +703,13 @@ footer
 				{
 					width: 325px;
 					height: 115px;
+					object-fit: cover;
+				}
+
+				#aff
+				{
+					margin-bottom: 0;
+					margin-left: 20px;
 				}
 
 
@@ -647,10 +721,18 @@ footer
 					height: auto;
 				}
 
+				#acti h1
+				{
+					margin-top: 0;
+					margin-bottom: 30px;
+				}
+
 				#acti figure
 				{
 					width: auto;
 					margin-right: 0;
+					margin-bottom: 20px;
+					margin-top: 0;
 				}			
 	
 
@@ -658,25 +740,17 @@ footer
 				{
 					width: 335px;
 					height: 135px;
-				}
-
-				#acti img.recadrer
-				{
 					object-fit: cover;
-
 				}
 
-				#acti img.vieux_port
-				{
-					object-position: 50% 20%;
-				}
+				
 
-				#acti img.calanques
-				{
-					object-position: 50% 25%;
-				}
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  modif disposition footer  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
-
+	footer
+	{
+		margin-top: 30px;
+	}
 
 
 
@@ -690,7 +764,7 @@ footer
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx masquer bouton formulaire version mobile   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 {
 
-	#mobboutonformulaire
+	form button.Rechercher
 	{
 		display: none;
 	}
