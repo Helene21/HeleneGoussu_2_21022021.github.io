@@ -82,10 +82,10 @@ header
 
 			nav li
 			{
-				margin: 0 26px 0 42px;
+				padding: 0 25px 0 25px;
 			}
 
-			nav a:hover
+			nav li:hover a
 			{
 				color: #0065FC;
 				font-weight: bold;
@@ -129,7 +129,7 @@ div#boutonformulaire
 		margin-left: -1px;
 	}
 
-	
+	 
 	#boutonformulaire p
 	{
 		margin-left: -5px;
@@ -142,12 +142,13 @@ div#boutonformulaire
 		border: unset;
 	}
 
-		.lieu_demandé
+		form input.lieu_demandé
 		{
 			height: 50px;
 			font-weight: bold;
 			margin-left: 5px;
 			margin-right: -4px;
+			background-color: unset;
 		}
 
 			input::placeholder
@@ -158,7 +159,7 @@ div#boutonformulaire
 
 		.Rechercher
 		{
-			border: 1px solid #0065FC;
+			border: unset;
 			border-bottom-right-radius : 15px; 
 			border-top-right-radius: 15px; 
 			background-color: #0065FC;
@@ -268,10 +269,10 @@ i.fa-info
 
 #heberg figure
 {
-	border: solid 4px white;
 	border-radius: 20px;
 	background-color: white;
 	box-shadow: 0px 0px 6px grey;
+	padding: 4px;
 }
 
 	figcaption h3
@@ -374,6 +375,10 @@ i.fa-info
 			display: flex;
 			flex-direction: row;
 			height: 140px;
+			max-width: 350px;
+			min-width: 320px;
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 			.populaires img
@@ -515,43 +520,7 @@ footer
 		margin: 30px 20px 20px 20px;
 	}
 
-		#recherche h1
-		{
-			margin-bottom: 0;
-		}
-
-		#centreounature
-		{
-			margin-bottom: 30px;
-		}
-
-		#filtres
-		{
-			margin-top: 15px;
-			margin-bottom: -20px;
-		}
-
-		#filtres ul
-		{
-			padding: 0;
-			margin-top: 0px;
-		}
-
-		#filtres li
-		{
-			margin-right: 6px;
-			font-size: 1em;
-		}
-
-		#info
-		{
-			margin: 0 -10px 20px -10px;
-		}
-
-		#info p
-		{
-			width: 90%;
-		}
+		
 
 
 	section#heberg
@@ -564,19 +533,12 @@ footer
 		flex-direction: column-reverse;
 		}
 
-		footer,	#listehotels, #activités
+		#listehotels, #activités
 			{
 			flex-direction: column;
 			}
 
-		footer div
-		{
-			width: 100%;
-		}
-
-			
-
-		
+	
 
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx modification menu navigation xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
@@ -615,15 +577,66 @@ footer
 			margin: 20px -20px 0 -20px;
 		}
 
-		nav a:hover
+		nav li:hover
+		{
+			border-bottom: 2px solid #0065FC;
+		}
+
+		nav li:hover a
 			{
 				color: #0065FC;
 				font-weight: bold;
 				border-top: unset;
 				padding-bottom: 20px;
 				width: 100%;
-				border-bottom: 2px solid #0065FC;
 			}
+
+
+	/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx modifs disposition section recherche xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+
+	#recherche h1
+		{
+			margin-bottom: 0;
+		}
+
+	#centreounature
+		{
+			margin-bottom: 30px;
+		}
+
+
+
+
+	#filtres
+	{
+			margin-top: 15px;
+			margin-bottom: -20px;
+	}
+
+		#filtres ul
+		{
+			padding: 0;
+			margin-top: 0px;
+		}
+
+		#filtres li
+		{
+			margin-right: 6px;
+			font-size: 1em;
+		}
+
+		#info
+		{
+			margin: 0 -10px 20px -10px;
+		}
+
+		#info p
+		{
+			width: 90%;
+		}
+
+
 
 
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx modification bouton formulaire  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
@@ -653,18 +666,27 @@ footer
 
 /*xxxxxxxxxxxxxxxxxxxxxxxxx  modif disposition + fonds section hébergements  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
-
-			div#pop
+	#heberg figure
 			{
-				width: auto;
-				border-radius: 0;
-				padding-bottom: 15px;
+				
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 20px;
 			}
+
+
+	div#pop
+		{
+			width: auto;
+			border-radius: 0;
+			padding-bottom: 15px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 
 			#titrepop
 			{
-				margin-top: -10px;
-				margin-bottom: 20px;
+				margin: -10px -10px 20px -20px;
 			}
 
 
@@ -674,16 +696,13 @@ footer
 				margin-left: 20px;
 			}
 
-			#heberg #heb
-			{
+	#heberg #heb
+		{
 				width: auto;
 				background-color: unset;
-			}
+		}
 
-			#heberg figure
-			{
-				margin: 0 20px 20px 20px;
-			}
+			
 
 				#heb h1
 				{
@@ -730,7 +749,9 @@ footer
 				#acti figure
 				{
 					width: auto;
-					margin-right: 0;
+					max-width: 335px;
+					margin-right: auto;
+					margin-left: auto;
 					margin-bottom: 20px;
 					margin-top: 0;
 				}			
@@ -749,8 +770,15 @@ footer
 
 	footer
 	{
+		flex-wrap: wrap;
 		margin-top: 30px;
 	}
+
+	
+		footer div
+				{
+					width: 100%;
+				}
 
 
 
@@ -768,8 +796,25 @@ footer
 	{
 		display: none;
 	}
-
-
-
 }
+
+
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  VERSION TABLETTES    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+@media all and (min-width: 768px) and (max-width: 991px)
+
+{
+	h1
+	{
+		color: red;
+	}
+
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+	
+}
+
+
+
 
