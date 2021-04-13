@@ -433,7 +433,7 @@ i.fa-info
 {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 	flex-wrap: wrap;
 }
 
@@ -718,8 +718,6 @@ footer
 			margin-right: auto;
 			border-radius: 0;
 			padding-bottom: 15px;
-			padding-left: 20px;
-			padding-right: 20px;
 		}
 
 			#titrepop
@@ -857,6 +855,15 @@ footer
 	margin-left: auto;
 }
 
+#boutonformulaire
+{
+	margin-top: 30px;
+}
+
+#filtres ul
+{
+	justify-content: space-between;
+}
 
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx disposition blocs partie hébergements   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
@@ -871,6 +878,8 @@ footer
 	{
 		margin-bottom: 40px;
 		width: auto;
+		margin-right: auto;
+		margin-left: auto;
 	}
 
 	#hotelspop
@@ -891,6 +900,38 @@ footer
 		width: 100%;
 	}
 
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx disposition partie activités   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+
+	#activités
+	{
+		justify-content: space-around;
+	}
+
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  correction disposition bloc Hébergements sur petits écrans ordis    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+@media all and (min-width: 1025px) and (max-width: 1110px)
+
+{
+	#pop
+	{
+		margin-left: 10px;
+	}
+
+	#listehotels
+	{
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	#heb figure
+	{
+		margin-right: 0;
+		margin-left: 0;
+	}
 
 }
 
