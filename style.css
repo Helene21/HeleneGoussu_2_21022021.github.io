@@ -8,6 +8,7 @@ body
 	margin: auto;
 	font-family: 'Raleway', sans-serif;
 	color: #000000;
+	
 }
 
 	header, section
@@ -25,7 +26,7 @@ body
 		font-size: 1.4em;
 	}
 
-	#aff, nav, p, h3, footer ul
+	nav, p, h3, footer ul
 	{
 		font-size: 1em;
 	}
@@ -61,6 +62,7 @@ header
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-top: 20px;
 }
 
 	#logo
@@ -80,7 +82,7 @@ header
 			margin-right: 40px;
 		}
 
-			nav li
+			nav li a
 			{
 				padding: 0 25px 0 25px;
 			}
@@ -145,6 +147,7 @@ div#boutonformulaire
 		form input.lieu_demandé
 		{
 			height: 50px;
+			max-width: 219px;
 			font-weight: bold;
 			margin-left: 5px;
 			margin-right: -4px;
@@ -179,12 +182,14 @@ div#boutonformulaire
 {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
+	align-items: baseline;
 }
 
 	#filtres h2
 	{
 		font-size: 1.1em;
+		margin-left: 12px;
+		margin-top: 30px;
 	}
 
 	#filtres i
@@ -203,7 +208,7 @@ div#boutonformulaire
 
 	#filtres li
 	{
-		margin-right: 30px;
+		margin-right: 25px;
 		border: 3px solid #F2F2F2;
 		border-radius: 30px;
 		padding-right: 20px;
@@ -235,7 +240,7 @@ i.fa-info
 {
 	width: 20px;
 	height: 20px;
-	font-size: 0.8em;
+	font-size: 0.7em;
 	text-align: center;
 	border: 2px solid #F2F2F2;
 	border-radius: 50%;
@@ -272,15 +277,7 @@ i.fa-info
 	border-radius: 20px;
 	background-color: white;
 	box-shadow: 0px 0px 6px grey;
-	padding: 4px;
 }
-
-	figcaption h3
-	{
-		margin-top: 5px;
-		margin-bottom: 0;
-
-	}
 
 	figcaption p
 	{
@@ -288,9 +285,22 @@ i.fa-info
 		margin-bottom: 5px;
 	}
 
-	figcaption i
+	#heberg figcaption p
+	{
+		font-size: 0.9em;
+	}
+
+	#heberg h3
+			{
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+
+
+	.fa-star
 	{
 		margin-bottom: 5px;
+		font-size: 0.8em;
 	}
 
 			/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Partie hébergements  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
@@ -309,13 +319,15 @@ i.fa-info
 	{
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: space-around;
 		align-content: center;
+		margin-left: 20px;
+		margin-right: 20px;
 	}
 
 		#heb figure
 		{
-			width: 250px;
+			width: 245px;
 			height: 200px;
 			margin: 20px 10px 10px 10px;
 		}
@@ -325,18 +337,20 @@ i.fa-info
 			{
 				border-top-right-radius: 20px;
 				border-top-left-radius: 20px;
-				width: 100%;
+				width: 235px;
+   				height: 115px;
+   				margin: 5px;
 			}
 
 			.hotels figcaption
 			{
-				margin-left: 10px;
+				margin-left: 15px;
 			}
-
 	
 	#aff
 	{
-		margin-bottom: 50px;
+		margin-top: 30px;
+		font-size: 1.2em;
 	}
 
 		/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Partie popularité  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
@@ -345,6 +359,9 @@ i.fa-info
 #pop
 {
 	width: 420px;
+	height: fit-content;
+    padding-bottom: 20px;
+	margin-left: 40px;
 }
 
 	#titrepop
@@ -365,25 +382,31 @@ i.fa-info
 			margin-right: -15px;
 		}
 
-	.populaires
+	#hotelspop
 	{
-		margin-bottom: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
+	
 		#pop figure
 		{
 			display: flex;
 			flex-direction: row;
 			height: 145px;
-			width: 345px;
-			margin-left: auto;
-			margin-right: auto;
+			width: 343px;
+			margin-left: 20px;
+			margin-right: 20px;
 		}
 
 			.populaires img
 			{
 				border-bottom-left-radius: 20px;
 				border-top-left-radius: 20px;
+				width: 127px;
+    			height: 135px;
+    			margin: 5px;
 			}
 
 
@@ -391,7 +414,7 @@ i.fa-info
 			{
 				display: flex;
 				flex-direction: column;
-				margin: 5px 40px 0 15px;
+				margin: 15px 40px 0 15px;
 			}
 
 				.push
@@ -410,7 +433,7 @@ i.fa-info
 {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
 	flex-wrap: wrap;
 }
 
@@ -460,6 +483,10 @@ i.fa-info
 				line-height: 55px;
 			}
 
+			#activités h3
+			{
+				margin-top: 0;
+			}
 
 
 			#notre_dame, #pomègues
@@ -473,7 +500,7 @@ i.fa-info
 footer
 {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	background-color: #F2F2F2;
 	margin-top: 80px;
 }
@@ -615,6 +642,13 @@ footer
 			margin-bottom: -20px;
 	}
 
+		#filtres h2
+		{
+			margin-top: 15px;
+			margin-left: 0px;
+		}
+
+
 		#filtres ul
 		{
 			padding: 0;
@@ -672,14 +706,14 @@ footer
 				
 				margin-left: auto;
 				margin-right: auto;
-				margin-bottom: 20px;
+				margin-bottom: 10px;
+				margin-top: 0;
 			}
 
 
 	div#pop
 		{
-			width: auto;
-			max-width: 420px;
+			width: 100%;
 			margin-left: auto;
 			margin-right: auto;
 			border-radius: 0;
@@ -696,7 +730,7 @@ footer
 
 			#pop figure
 			{
-				width: 323px;
+				width: 335px;
 			}
 
 	#heberg #heb
@@ -715,8 +749,7 @@ footer
 
 				#heb figure
 				{
-					width: auto;
-					height: auto;
+					width: 335px;
 					margin-right: 0;
 					margin-left: 0;
 				}
@@ -724,7 +757,6 @@ footer
 				.hotels img
 				{
 					width: 325px;
-					height: 115px;
 					object-fit: cover;
 				}
 
@@ -732,6 +764,7 @@ footer
 				{
 					margin-bottom: 0;
 					margin-left: 20px;
+					margin-top: 20px;
 				}
 
 
@@ -746,7 +779,6 @@ footer
 
 				#acti h1
 				{
-					margin-top: 0;
 					margin-bottom: 30px;
 				}
 
@@ -754,6 +786,7 @@ footer
 				{
 					width: auto;
 					max-width: 335px;
+					height: 190px;
 					margin-right: auto;
 					margin-left: auto;
 					margin-bottom: 20px;
@@ -776,13 +809,15 @@ footer
 	{
 		flex-wrap: wrap;
 		margin-top: 30px;
+		margin-left: -10px;
+		padding-bottom: 50px;
 	}
 
 	
 		footer div
-				{
-					width: 100%;
-				}
+		{
+			min-width: 268px;
+		}
 
 
 
@@ -814,6 +849,16 @@ footer
 		color: red;
 	}
 
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx centrages section recherche   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+#boutonformulaire, #filtres
+{
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx disposition blocs partie hébergements   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 	
 	#heberg
@@ -825,12 +870,14 @@ footer
 	#pop
 	{
 		margin-bottom: 40px;
+		width: auto;
 	}
 
 	#hotelspop
 	{
-		display: flex;
+		flex-direction: row;
 		flex-wrap: wrap;
+		justify-content: center;
 	}
 
 	#pop figure
