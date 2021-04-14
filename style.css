@@ -8,7 +8,6 @@ body
 	margin: auto;
 	font-family: 'Raleway', sans-serif;
 	color: #000000;
-	
 }
 
 	header, section
@@ -87,7 +86,7 @@ header
 				padding: 0 25px 0 25px;
 			}
 
-			nav li:hover a
+			nav li:hover a                        /*modif aspect éléments au survol*/
 			{
 				color: #0065FC;
 				font-weight: bold;
@@ -192,20 +191,7 @@ div#boutonformulaire
 		margin-top: 30px;
 	}
 
-	#filtres i
-	{
-		width: 30px;
-		height: 30px;
-		text-align: center;
-		border-radius: 50%;
-		background-color: #DEEBFF;
-		color: #0065FC;
-		padding: 10px;
-		margin-right: 10px;
-		margin-left: -3px;
-		line-height: 30px;
-	}
-
+	
 	#filtres li
 	{
 		margin-right: 25px;
@@ -216,8 +202,21 @@ div#boutonformulaire
 		margin-bottom: 10px;
 	}
 
-	
-		#filtres li:hover
+		#filtres i
+			{
+				width: 30px;
+				height: 30px;
+				text-align: center;
+				border-radius: 50%;
+				background-color: #DEEBFF;
+				color: #0065FC;
+				padding: 10px;
+				margin-right: 10px;
+				margin-left: -3px;
+				line-height: 30px;
+			}
+			
+		#filtres li:hover         /*modif aspect filtres au survol*/
 
 		{
 			color: #0065FC;
@@ -229,6 +228,8 @@ div#boutonformulaire
 			background-color: #0065FC;
 			color: #DEEBFF;
 		}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  info  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
 div#info
 {
@@ -250,7 +251,7 @@ i.fa-info
 	line-height: 20px;
 }
 
-/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX SECTION HEBERGEMENTS + POPULARITE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ELEMENTS COMMUNS HEBERGEMENTS + POPULARITE XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
 		
 #heberg
@@ -296,14 +297,14 @@ i.fa-info
 				margin-bottom: 0;
 			}
 
-
 	.fa-star
 	{
 		margin-bottom: 5px;
 		font-size: 0.8em;
 	}
 
-			/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Partie hébergements  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+	/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Partie hébergements  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
 
 #heb
 {
@@ -353,13 +354,13 @@ i.fa-info
 		font-size: 1.2em;
 	}
 
-		/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Partie popularité  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+	/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Partie popularité  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 
 #pop
 {
 	width: 420px;
-	height: fit-content;
+	height: fit-content;     /* évite alignement horizontal avec la hauteur de la partie "heb" sur petites largeurs */
     padding-bottom: 20px;
 	margin-left: 40px;
 }
@@ -417,7 +418,7 @@ i.fa-info
 				margin: 15px 40px 0 15px;
 			}
 
-				.push
+				.push             /* permet d'écarter l'un des éléments de la flexbox (ici les étoiles), tout en restant à l'intérieur de la box  */
 				
 				{
 					margin-top: auto;
@@ -429,6 +430,13 @@ i.fa-info
 
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX SECTION ACTIVITES  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
+
+#acti h1
+	{
+		margin: 50px 0 -30px 0;
+	}
+
+
 #activités
 {
 	display: flex;
@@ -437,11 +445,7 @@ i.fa-info
 	flex-wrap: wrap;
 }
 
-	#acti h1
-	{
-		margin: 50px 0 -30px 0;
-	}
-
+	
 	#activités div
 	{
 		width: 300px;
@@ -471,11 +475,6 @@ i.fa-info
 				object-fit: cover;
 			}
 
-			img.vieux_port
-			{
-				object-position: 50% 50%;
-			}
-
 			#activités figcaption
 			{
 				margin-left: 20px;
@@ -503,6 +502,7 @@ footer
 	justify-content: space-between;
 	background-color: #F2F2F2;
 	margin-top: 80px;
+	padding-bottom: 30px;
 }
 
 	footer div 
@@ -525,60 +525,27 @@ footer
 
 		
 
-/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX VERSION MOBILE  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX VERSION MOBILES  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
 @media all and (max-width: 768px)
 
 {
 
 
-	/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx modifs disposition générale xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
-	body
-	{
-		width: auto;
-	}
-
-	header, section#acti
-	{
-		margin: 30px 20px 0 20px;
-	}
-
-	section#recherche
-	{
-		margin: 30px 20px 20px 20px;
-	}
-
-		
-
-
-	section#heberg
-	{
-		margin: 0;
-	}
-
-		#heberg
-		{
-		flex-direction: column-reverse;
-		}
-
-		#listehotels, #activités
-			{
-			flex-direction: column;
-			}
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx modification header / menu navigation pour MOBILES    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 	
 
-/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx modification menu navigation xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+	header
+	{
+		margin: 30px 20px 0 20px;
+		align-items: flex-start;     /*  permet de remonter le logo au niveau vertical de "s'inscrire"   */
+	}
 
-		
-		header
-		{
-			align-items: flex-start;
-		}
 
 		#logo
 		{
-			position: absolute;
+			position: absolute;           /* permet à nav de pouvoir se décaler sur la gauche  */
 		}
 
 		
@@ -605,22 +572,26 @@ footer
 			margin: 20px -20px 0 -20px;
 		}
 
-		nav li:hover
+		nav li:hover					/*xxxxxxxxxxxxxxxxx  changement aspect au survol  xxxxxxxxxxxxxxxxxxxxx*/
 		{
 			border-bottom: 2px solid #0065FC;
 		}
 
 		nav li:hover a
 			{
-				color: #0065FC;
-				font-weight: bold;
 				border-top: unset;
 				padding-bottom: 20px;
 				width: 100%;
 			}
 
 
-	/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx modifs disposition section recherche xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+	/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  section recherche pour MOBILES  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+
+	section#recherche
+	{
+		margin: 30px 20px 20px 20px;
+	}
 
 
 	#recherche h1
@@ -633,48 +604,45 @@ footer
 			margin-bottom: 30px;
 		}
 
-
-
-
 	#filtres
-	{
-			margin-top: 15px;
-			margin-bottom: -20px;
-	}
-
-		#filtres h2
 		{
 			margin-top: 15px;
-			margin-left: 0px;
+			margin-bottom: -20px;
 		}
+
+		#filtres h2
+			{
+				margin-top: 15px;
+				margin-left: 0px;
+			}
 
 
 		#filtres ul
-		{
-			padding: 0;
-			margin-top: 0px;
-		}
+			{
+				padding: 0;
+				margin-top: 0px;
+			}
 
-		#filtres li
-		{
-			margin-right: 6px;
-			font-size: 1em;
-		}
+			#filtres li
+				{
+					margin-right: 6px;
+					font-size: 1em;
+				}
 
-		#info
+	#info
 		{
 			margin: 0 -10px 20px -10px;
 		}
 
 		#info p
-		{
-			width: 90%;
-		}
+			{
+				width: 90%;						/* évite écrasement de l'icône sur la gauche */
+			}
 
 
 
 
-/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx modification bouton formulaire  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx modification bouton formulaire pour MOBILES  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 	div#boutonformulaire
 	{
@@ -683,7 +651,7 @@ footer
 	}
 
 
-		#boutonformdesktop
+		#boutonformdesktop					/* masque bouton forme texte du desktop */
 		{
 			display: none;
 		}
@@ -699,19 +667,24 @@ footer
 
 
 
-/*xxxxxxxxxxxxxxxxxxxxxxxxx  modif disposition + fonds section hébergements  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  section hébergements  pour MOBILES  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
+
+section#heberg
+	{
+	margin: 0;
+	flex-direction: column-reverse;
+	}
+ 
 	#heberg figure
-			{
-				
-				margin-left: auto;
-				margin-right: auto;
-				margin-bottom: 10px;
-				margin-top: 0;
-			}
+		{
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 10px;
+		margin-top: 0;
+		}
 
-
-	div#pop
+		div#pop
 		{
 			width: 100%;
 			margin-left: auto;
@@ -725,81 +698,85 @@ footer
 				margin: -10px -10px 20px -20px;
 			}
 
-
 			#pop figure
 			{
 				width: 335px;
 			}
 
-	#heberg #heb
+
+		#heberg #heb
 		{
-				width: auto;
-				background-color: unset;
+			width: auto;
+			background-color: unset;
 		}
+		
+			#heb h1
+			{
+				margin-left: 20px;
+				margin-bottom: 20px;
+			}
 
-			
-
-				#heb h1
-				{
-					margin-left: 20px;
-					margin-bottom: 20px;
-				}
+			#listehotels, #activités
+			{
+				flex-direction: column;
+			}
 
 				#heb figure
 				{
 					width: 335px;
-					margin-right: 0;
-					margin-left: 0;
 				}
 
-				.hotels img
-				{
-					width: 325px;
-					object-fit: cover;
-				}
+					.hotels img
+					{
+						width: 325px;
+						object-fit: cover;
+					}
 
-				#aff
-				{
-					margin-bottom: 0;
-					margin-left: 20px;
-					margin-top: 20px;
-				}
+			#aff
+			{
+				margin-bottom: 0;
+				margin-left: 20px;
+				margin-top: 20px;
+			}
 
 
-/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  modif disposition section activités  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  section activités pour MOBILES xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
-				#activités div
-				{
-					width: auto;
-					height: auto;
-					margin-top: 0;
-				}
+	section#acti
+	{
+		margin: 30px 20px 0 20px;
+	}
 
-				#acti h1
-				{
-					margin-bottom: 30px;
-				}
+		#activités div
+		{
+			width: auto;
+			height: auto;
+			margin-top: 0;
+		}
 
-				#acti figure
-				{
-					width: auto;
-					max-width: 335px;
-					height: 190px;
-					margin-right: auto;
-					margin-left: auto;
-					margin-bottom: 20px;
-					margin-top: 0;
-				}			
+			#acti h1
+			{
+				margin-bottom: 30px;
+			}
+
+			#acti figure
+			{
+				width: auto;
+				max-width: 335px;
+				height: 190px;
+				margin-right: auto;
+				margin-left: auto;
+				margin-bottom: 20px;
+				margin-top: 0;
+			}			
 	
-
 				#acti img
 				{
 					width: 335px;
 					height: 135px;
 					object-fit: cover;
 				}
-
-				
+		
 
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  modif disposition footer  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
@@ -808,27 +785,22 @@ footer
 		flex-wrap: wrap;
 		margin-top: 30px;
 		margin-left: -10px;
-		padding-bottom: 50px;
 	}
-
 	
 		footer div
 		{
 			min-width: 268px;
 		}
 
-
-
 }		
 
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  FIN VERSION MOBILES  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+/* xxxxxxxxxxxxxxxxxxxxxxxx masquer bouton formulaire version icône pour les écrans AUTRES QUE MOBILES xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 @media all and (min-width: 768px)
 
-
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx masquer bouton formulaire version mobile   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 {
-
 	form button.Rechercher
 	{
 		display: none;
@@ -842,31 +814,27 @@ footer
 @media all and (min-width: 768px) and (max-width: 1024px)
 
 {
-	h1
+	
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx centrages section recherche TABLETTES  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+	#boutonformulaire, #filtres
 	{
-		color: red;
+		margin-right: auto;
+		margin-left: auto;
 	}
 
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx centrages section recherche   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+	#boutonformulaire
+	{
+		margin-top: 30px;
+	}
 
-#boutonformulaire, #filtres
-{
-	margin-right: auto;
-	margin-left: auto;
-}
+		#filtres ul
+		{
+			justify-content: space-between;
+		}
 
-#boutonformulaire
-{
-	margin-top: 30px;
-}
-
-#filtres ul
-{
-	justify-content: space-between;
-}
-
-
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx disposition blocs partie hébergements   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx disposition blocs partie hébergements TABLETTES  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 	
 	#heberg
 	{
@@ -874,34 +842,34 @@ footer
 		align-items: center;
 	}
 
-	#pop
-	{
-		margin-bottom: 40px;
-		width: auto;
-		margin-right: auto;
-		margin-left: auto;
-	}
+		#pop
+		{
+			margin-bottom: 40px;
+			width: auto;
+			margin-right: auto;
+			margin-left: auto;
+		}
 
-	#hotelspop
-	{
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
+			#hotelspop
+			{
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
 
-	#pop figure
-	{
-		width: 323px;
-	}
+			#pop figure
+			{
+				width: 323px;
+			}
 
-	#heb
-	{
-		flex-wrap: wrap;
-		width: 100%;
-	}
+		#heb
+		{
+			flex-wrap: wrap;
+			width: 100%;
+		}
 
 
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx disposition partie activités   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx disposition partie activités TABLETTES  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 
 	#activités
@@ -911,7 +879,9 @@ footer
 
 }
 
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  correction disposition bloc Hébergements sur petits écrans ordis    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  FIN VERSION TABLETTES  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  correction disposition bloc Hébergements sur petits écrans ordis    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
 @media all and (min-width: 1025px) and (max-width: 1110px)
 
@@ -934,6 +904,8 @@ footer
 	}
 
 }
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   THE END  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
 
 
