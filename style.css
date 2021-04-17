@@ -143,7 +143,7 @@ div#boutonformulaire
 		border: unset;
 	}
 
-		form input.lieu_demandé
+		form input.lieu_demande
 		{
 			height: 50px;
 			max-width: 219px;
@@ -437,7 +437,7 @@ i.fa-info
 	}
 
 
-#activités
+#activites
 {
 	display: flex;
 	flex-direction: row;
@@ -446,7 +446,7 @@ i.fa-info
 }
 
 	
-	#activités div
+	#activites div
 	{
 		width: 300px;
 		height: 445px;
@@ -462,7 +462,7 @@ i.fa-info
 			margin-left: 0;
 		}
 
-			#activités img
+			#activites img
 			{
 				border-top-right-radius: 20px;
 				border-top-left-radius: 20px;
@@ -475,20 +475,20 @@ i.fa-info
 				object-fit: cover;
 			}
 
-			#activités figcaption
+			#activites figcaption
 			{
 				margin-left: 20px;
 				height: 55px;
 				line-height: 55px;
 			}
 
-			#activités h3
+			#activites h3
 			{
 				margin-top: 0;
 			}
 
 
-			#notre_dame, #pomègues
+			#notre_dame, #pomegues
 			{
 				margin-bottom: 30px;
 			}
@@ -716,7 +716,7 @@ section#heberg
 				margin-bottom: 20px;
 			}
 
-			#listehotels, #activités
+			#listehotels, #activites
 			{
 				flex-direction: column;
 			}
@@ -747,7 +747,7 @@ section#heberg
 		margin: 30px 20px 0 20px;
 	}
 
-		#activités div
+		#activites div
 		{
 			width: auto;
 			height: auto;
@@ -872,7 +872,7 @@ section#heberg
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx disposition partie activités TABLETTES  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 
-	#activités
+	#activites
 	{
 		justify-content: space-around;
 	}
